@@ -1,25 +1,28 @@
 import { useAuth0 } from "@auth0/auth0-react";
 import LogoutButton from "../Components/Logout";
-import FooterNavigatePropi from "../Components/FooterNavigateProp";
+import React from "react";
+import FooterPropietario from "../Components/FooterNavigation";
+import '../Assets/Css/Background.css'
 
-export default function HomePropietario(){
+
+
+
+export default function Home(){
 
     const { user} = useAuth0();
 
     return(
         <>
-            <div>
-                <img src={user.picture} alt={user.name} />
+            <div className="BackgroundHomePropietario">
+                {/*<img src={user.picture} alt={user.name} />
                 <h2>{user.name}</h2>
-                <p>{user.email}</p>
+                <p>{user.email}</p>*/}
             </div>
+            <FooterPropietario></FooterPropietario>
 
-            <div>
-                <h2>Boton Home</h2>
-                <LogoutButton></LogoutButton>
-                <FooterNavigatePropi></FooterNavigatePropi>
-                
-            </div>
+
+
+             
         </>
     
     )

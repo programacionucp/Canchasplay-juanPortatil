@@ -3,9 +3,6 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from '../Container/Home';
 import Login from '../Components/Login';
 import ProtectedRoute from '../Components/ProtectedRoute';
-import BasicModal from '../Components/Modal';
-import HomePropietario from '../Container/HomePropietario';
-import ButtonBaseDemo from '../Container/Homepr';
 import FooterNavigation from '../Components/FooterNavigation';
 
 
@@ -15,7 +12,6 @@ export default function App(){
             <BrowserRouter>
                 <Routes>
                     <Route exact path="/login" element={<Login />}></Route>   
-                    <Route exact path="/homeProp" element={<ProtectedRoute><HomePropietario/></ProtectedRoute>}></Route>
                     <Route exact path="/home" element={<ProtectedRoute><Home/></ProtectedRoute>}></Route>
                     <Route exact path="/prueba" element={<ProtectedRoute><FooterNavigation/></ProtectedRoute>}></Route>
 
